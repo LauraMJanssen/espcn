@@ -269,7 +269,7 @@ class ESPCN():
 
 
 def restoration(resolution=None, k=1, qp='25'):
-    logging.basicConfig(filename='/content/ESPCN-Keras/logs/espcn.log', level=logging.INFO)
+    logging.basicConfig(filename='/content/espcn/logs/espcn.log', level=logging.INFO)
     logging.info('Started')
     # ------------------------------------------------------
 
@@ -277,7 +277,7 @@ def restoration(resolution=None, k=1, qp='25'):
     logging.info(">> Creating the ESPCN network")
     # Instantiate the ESPCN object
     espcn = ESPCN(height_lr=17, width_lr=17, channels=3, lr=1e-4, upscaling_factor=4, colorspace='RGB')
-    espcn.load_weights(weights='/content/ESPCN-Keras/model/ESPCN_4X.h5')
+    espcn.load_weights(weights='/content/espcn/model/ESPCN_4X.h5')
 
     if (resolution == None):
         datapath = '/content/gdrive/MyDrive/MA/IVUS_LowRes_Scale4_Valid/'
