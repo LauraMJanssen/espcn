@@ -322,7 +322,7 @@ class DataLoader(Sequence):
 
                         # For LR, do bicubic downsampling
                     lr_shape = (int(img_hr.shape[1] / self.scale), int(img_hr.shape[0] / self.scale))
-                    img_lr = cv2.resize(cv2.GaussianBlur(img_hr, (5, 5), 0), lr_shape, interpolation=cv2.INTER_CUBIC)
+                    img_lr = cv2.resize(img_hr, lr_shape, interpolation=cv2.INTER_CUBIC)
 
                     # Scale color values
                     img_hr = self.scale_hr_imgs(img_hr)

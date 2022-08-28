@@ -300,7 +300,7 @@ if __name__ == '__main__':
             print(">> TRAIN DEFAULT MODEL ESPCN: scale {}X".format(args.scale))
             # As in paper - train for x epochs
             espcn = ESPCN(lr=1e-2, **args_model)
-            espcn.load_weights("./model/ESPCN_4X.h5")
+            #espcn.load_weights("./model/ESPCN_4X.h5")
             model_train(espcn, args_train, epochs=args.epochs)
 
     # Re-initialize & fine-tune GAN - load generator & discriminator weights
