@@ -280,7 +280,7 @@ def restoration(resolution=None, k=1, qp='25'):
     espcn.load_weights(weights='/content/espcn/model/ESPCN_4X.h5')
 
     if (resolution == None):
-        datapath = '/content/gdrive/MyDrive/MA/IVUS_LowRes_Scale4_Valid/'
+        datapath = '/content/drive/MyDrive/IVUSImages/LR_Scale4_Valid/'
         outpath = '/content/results/'
         lfilenames = []
         for dirpath, _, filenames in os.walk(datapath):
